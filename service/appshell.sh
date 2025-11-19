@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Start the java app
-java -jar /app.jar &
+#java -jar /app.jar &
+java $JAVA_OPTS -jar /app.jar &
 status=$?
 if [ $status -ne 0 ]; then
   echo "Failed to start java microservice: $status"
